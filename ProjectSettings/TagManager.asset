@@ -10,6 +10,7 @@ TagManager:
   - Left Boundary
   - Right Boundary
   - TopBottom Boundary
+  - Middle Boundary
   layers:
   - Default
   - TransparentFX

@@ -9,9 +9,13 @@ public class Paddle : MonoBehaviour
 
     public int strength = 50;
 
+    Rigidbody2D rigidBody;
+
     // Start is called before the first frame update
     void Start()
     {
+        rigidBody = GetComponent<Rigidbody2D>();
+        rigidBody.freezeRotation = true;
         if (transform.CompareTag("PaddleRight")) {
             
         }
@@ -25,21 +29,33 @@ public class Paddle : MonoBehaviour
     {
         if (transform.CompareTag("PaddleRight")) {
             GetComponent<SpriteRenderer>().color = new Color(0, 0, Mathf.Abs(Mathf.Sin(Time.time)));
-        if (Input.GetKey(KeyCode.UpArrow)) {
-            transform.Translate(Vector3.up * speed * Time.deltaTime);
+            if (Input.GetKey(KeyCode.UpArrow)) {
+                transform.Translate(Vector3.up * speed * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.DownArrow)) {
+                transform.Translate(Vector3.down * speed * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.LeftArrow)) {
+                transform.Translate(Vector3.left * speed * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.RightArrow)) {
+                transform.Translate(Vector3.right * speed * Time.deltaTime);
+            }
         }
-        if (Input.GetKey(KeyCode.DownArrow)) {
-            transform.Translate(Vector3.down * speed * Time.deltaTime);
+        else if (transform.CompareTag("PaddleLeft")){
+            GetComponent<SpriteRenderer>().color = new Color(Mathf.Abs(Mathf.Sin(Time.time)), 0, Mathf.Abs(Mathf.Sin(Time.time)));
+            if (Input.GetKey(KeyCode.W)) {
+                transform.Translate(Vector3.up * speed * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.S)) {
+                transform.Translate(Vector3.down * speed * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.A)) {
+                transform.Translate(Vector3.left * speed * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.D)) {
+                transform.Translate(Vector3.right * speed * Time.deltaTime);
+            }
         }
-    }
-    else if (transform.CompareTag("PaddleLeft")){
-        GetComponent<SpriteRenderer>().color = new Color(Mathf.Abs(Mathf.Sin(Time.time)), 0, Mathf.Abs(Mathf.Sin(Time.time)));
-         if (Input.GetKey(KeyCode.W)) {
-            transform.Translate(Vector3.up * speed * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.S)) {
-            transform.Translate(Vector3.down * speed * Time.deltaTime);
-          }
-      }
     }
 }
