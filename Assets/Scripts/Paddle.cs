@@ -7,6 +7,8 @@ public class Paddle : MonoBehaviour
     [SerializeField]
     private float speed = 0.01f;
 
+    public int strength = 50;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +29,7 @@ public class Paddle : MonoBehaviour
             transform.Translate(Vector3.up * speed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.DownArrow)) {
-            transform.Translate(-Vector3.up * speed * Time.deltaTime);
+            transform.Translate(Vector3.down * speed * Time.deltaTime);
         }
     }
     else if (transform.CompareTag("PaddleLeft")){
@@ -36,7 +38,7 @@ public class Paddle : MonoBehaviour
             transform.Translate(Vector3.up * speed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.S)) {
-            transform.Translate(-Vector3.up * speed * Time.deltaTime);
+            transform.Translate(Vector3.down * speed * Time.deltaTime);
           }
       }
     }
