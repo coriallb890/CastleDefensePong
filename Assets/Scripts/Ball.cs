@@ -19,6 +19,7 @@ public class Ball : MonoBehaviour
     public GameObject gameOver;
     public GameObject castle_left;
     public GameObject castle_right;
+    public GameObject middle_boundary;
     private Paddle left_script;
     private Paddle right_script;
     private Renderer left_castle;
@@ -37,6 +38,7 @@ public class Ball : MonoBehaviour
         right_script = paddle_right.GetComponent<Paddle>();
         left_castle = castle_left.GetComponent<Renderer>();
         right_castle = castle_right.GetComponent<Renderer>();
+        Physics2D.IgnoreCollision(middle_boundary.GetComponent<Collider2D>(), GetComponent<Collider2D>());
 
         float result = Random.Range(0f, 1f);
         if (result < 0.5) {
@@ -68,7 +70,6 @@ public class Ball : MonoBehaviour
             dir.y *= -1;
         }
         else if (c.gameObject.CompareTag("Right Boundary")){
-            print("left scores");
             healthRight = healthRight - left_script.strength;
             if(healthRight <= 150 && healthRight > 50){
                 right_castle.material.color = new Color(255, 244, 0, 1);
@@ -87,7 +88,6 @@ public class Ball : MonoBehaviour
             transform.position = origPos;
         }
         else if (c.gameObject.CompareTag("Left Boundary")){
-            print("right scores");
             healthLeft = healthLeft - right_script.strength;
             if(healthLeft <= 150 && healthLeft > 50){
                 left_castle.material.color = new Color(255, 244, 0, 1);
