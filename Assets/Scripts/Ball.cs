@@ -7,10 +7,12 @@ public class Ball : MonoBehaviour
 {
     public TextMeshProUGUI txtHealthLeft;
     public TextMeshProUGUI txtHealthRight;
+	public TextMeshProUGUI timeText;
 
     private int healthLeft;
     private int healthRight;
     public float speed = 4;
+	public float timeToDisplay;
     public Vector2 dir;
     private Vector2 origPos;
 
@@ -24,6 +26,7 @@ public class Ball : MonoBehaviour
     private Paddle right_script;
     private Renderer left_castle;
     private Renderer right_castle;
+	
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +35,7 @@ public class Ball : MonoBehaviour
         healthRight = 250;
         txtHealthLeft.text = "250";
         txtHealthRight.text = "250";
+		timeText.text = "0";
         origPos = transform.position;
 
         left_script = paddle_left.GetComponent<Paddle>();
@@ -60,17 +64,35 @@ public class Ball : MonoBehaviour
     void Update()
     {
         transform.Translate(dir * speed * Time.deltaTime);
+		
+		timeToDisplay += Time.deltaTime;
+		float minutes = Mathf.FloorToInt(timeToDisplay / 60); 
+		float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+		timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+		
+		if (seconds >= 10.0 && seconds < 20){
+			speed = 6;
+		}
+		else if (seconds >= 20.0) {
+			speed = 9;
+		}
+		else {
+			speed = 4;
+		}
     }
 
+	
+	
     void OnCollisionEnter2D(Collision2D c) {
         if (c.gameObject.transform.tag.StartsWith("Paddle")){
         dir.x *= -1;
-    }
+		}
         else if (c.gameObject.CompareTag("TopBottom Boundary")){
             dir.y *= -1;
         }
         else if (c.gameObject.CompareTag("Right Boundary")){
             healthRight = healthRight - left_script.strength;
+			timeToDisplay = timeToDisplay - timeToDisplay;
             if(healthRight <= 150 && healthRight > 50){
                 right_castle.material.color = new Color(255, 244, 0, 1);
             }
@@ -89,6 +111,7 @@ public class Ball : MonoBehaviour
         }
         else if (c.gameObject.CompareTag("Left Boundary")){
             healthLeft = healthLeft - right_script.strength;
+			timeToDisplay = timeToDisplay - timeToDisplay;
             if(healthLeft <= 150 && healthLeft > 50){
                 left_castle.material.color = new Color(255, 244, 0, 1);
             }
