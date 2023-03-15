@@ -6,6 +6,9 @@ public class Paddle : MonoBehaviour
 {
     [SerializeField]
     private float speed = 0.01f;
+	public float timeBtwSpawns;
+	public float startTimeBtwSpawns;
+	public GameObject echo;
 
     public int strength = 50;
 
@@ -27,6 +30,12 @@ public class Paddle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		if (timeBtwSpawns <= 0) {
+			Instantiate(echo, transform.position, Quaternion.identity);
+			timeBtwSpawns = startTimeBtwSpawns;
+		} else {
+			timeBtwSpawns -= Time.deltaTime;
+		}
         if (transform.CompareTag("PaddleRight")) {
             GetComponent<SpriteRenderer>().color = new Color(0, 0, Mathf.Abs(Mathf.Sin(Time.time)));
             if (Input.GetKey(KeyCode.UpArrow)) {
@@ -58,4 +67,9 @@ public class Paddle : MonoBehaviour
             }
         }
     }
+	private void OnTriggerEnter2D(Collider2D c) {
+        if (c.gameObject.transform.tag.StartsWith("Powerup")){
+			strength = 51;
+		}
+	}
 }
