@@ -9,12 +9,14 @@ public class Ball : MonoBehaviour
     public TextMeshProUGUI txtHealthRight;
 	public TextMeshProUGUI timeText;
 
+
     private int healthLeft;
     private int healthRight;
     public float speed = 4;
 	public float timeToDisplay;
     public Vector2 dir;
     private Vector2 origPos;
+
 
     public GameObject paddle_left;
     public GameObject paddle_right;
@@ -43,6 +45,7 @@ public class Ball : MonoBehaviour
         left_castle = castle_left.GetComponent<Renderer>();
         right_castle = castle_right.GetComponent<Renderer>();
         Physics2D.IgnoreCollision(middle_boundary.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+		
 
         float result = Random.Range(0f, 1f);
         if (result < 0.5) {
@@ -85,7 +88,7 @@ public class Ball : MonoBehaviour
 	
     void OnCollisionEnter2D(Collision2D c) {
         if (c.gameObject.transform.tag.StartsWith("Paddle")){
-        dir.x *= -1;
+			dir.x *= -1;
 		}
         else if (c.gameObject.CompareTag("TopBottom Boundary")){
             dir.y *= -1;

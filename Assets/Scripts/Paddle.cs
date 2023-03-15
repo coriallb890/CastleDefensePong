@@ -58,4 +58,9 @@ public class Paddle : MonoBehaviour
             }
         }
     }
+	private void OnTriggerEnter2D(Collider2D c) {
+        if (c.gameObject.transform.tag.StartsWith("Powerup")){
+			strength = 51;
+		}
+	}
 }
