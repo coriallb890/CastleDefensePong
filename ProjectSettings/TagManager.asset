@@ -11,6 +11,8 @@ TagManager:
   - Right Boundary
   - TopBottom Boundary
   - Middle Boundary
+  - Powerup
+  - Catch Boundary
   layers:
   - Default
   - TransparentFX
@@ -18,7 +20,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Powerups!!
   - 
   - 
   - 
