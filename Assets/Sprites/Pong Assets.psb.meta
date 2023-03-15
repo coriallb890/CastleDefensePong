@@ -101,9 +101,9 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 685
-      y: 315
+      y: 314
       width: 323
-      height: 150
+      height: 79
     spriteID: 8fca48fc023bb6144bfbfda9fee2d733
     spriteBone: []
     spriteOutline: []
@@ -115,6 +115,28 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 685, y: 315}
     spritePosition: {x: 1304, y: 822}
+  - name: Strength Powerup
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 520
+      y: 2
+      width: 159
+      height: 159
+    spriteID: 1ff27beb3c66f4748b451fee8d356dc2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 522, y: 4}
+    spritePosition: {x: 853, y: 488}
   - name: Red Sword
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -123,9 +145,9 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 685
-      y: 473
+      y: 472
       width: 323
-      height: 77
+      height: 79
     spriteID: efe6a453217e0e1468ec853692b777bb
     spriteBone: []
     spriteOutline: []
@@ -159,6 +181,50 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 4, y: 4}
     spritePosition: {x: 561, y: 733}
+  - name: Speed Boost Powerup
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 682
+      y: 2
+      width: 160
+      height: 159
+    spriteID: 103fce13fec6e8b4ebdf9679ebb15240
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 685, y: 4}
+    spritePosition: {x: 1126, y: 487}
+  - name: Healing Powerup
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 846
+      y: 3
+      width: 160
+      height: 158
+    spriteID: db03ea656405b30419834e96bce60699
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 848, y: 4}
+    spritePosition: {x: 614, y: 488}
   - name: Hue/Saturation 1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -225,28 +291,6 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 375, y: 315}
     spritePosition: {x: 83, y: 738}
-  - name: Layer 0
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 1016
-      y: 481
-      width: 0
-      height: 0
-    spriteID: 41719928b9420a242bcf748d447f4cce
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 1016, y: 481}
-    spritePosition: {x: 0, y: 1080}
   characterData:
     bones: []
     parts: []
@@ -260,7 +304,51 @@ ScriptedImporter:
     dimension: {x: 0, y: 0}
     characterGroups: []
     boneReadOnly: 0
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   mosaicLayers: 1
   characterMode: 1
   documentPivot: {x: 0, y: 0}
@@ -287,6 +375,16 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
+  - name: Strength Powerup
+    spriteName: Strength Powerup
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1ff27beb3c66f4748b451fee8d356dc2
+    layerID: 57
+    mosaicPosition: {x: 522, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Red Sword
     spriteName: Red Sword
     isGroup: 0
@@ -304,6 +402,26 @@ ScriptedImporter:
     spriteID: 98fcc707ac453694d87352915f7d81f8
     layerID: 5
     mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Speed Boost Powerup
+    spriteName: Speed Boost Powerup
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 103fce13fec6e8b4ebdf9679ebb15240
+    layerID: 59
+    mosaicPosition: {x: 685, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Healing Powerup
+    spriteName: Healing Powerup
+    isGroup: 0
+    parentIndex: -1
+    spriteID: db03ea656405b30419834e96bce60699
+    layerID: 53
+    mosaicPosition: {x: 848, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -334,16 +452,6 @@ ScriptedImporter:
     spriteID: 5db848f67ae221045acb7093e02e36d4
     layerID: 3
     mosaicPosition: {x: 375, y: 315}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
-  - name: Layer 0
-    spriteName: Layer 0
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 41719928b9420a242bcf748d447f4cce
-    layerID: 2
-    mosaicPosition: {x: 1016, y: 481}
     flatten: 0
     isImported: 1
     isVisible: 1
