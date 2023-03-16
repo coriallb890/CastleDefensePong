@@ -34,7 +34,7 @@ public class Powerup : MonoBehaviour
 		float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 		if ((seconds % 10) == 0 & spawned == false) {
 			spawned = true;
-			int x = Random.Range(0, 2);
+			int x = Random.Range(0, 3);
 			if(x == 0){
 				GetComponent<SpriteRenderer>().sprite = healthPU;
 				randPowerup = "Health";
