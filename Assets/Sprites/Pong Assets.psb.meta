@@ -114,7 +114,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 522, y: 4}
-    spritePosition: {x: 1202, y: 501}
+    spritePosition: {x: 1911, y: 900}
   - name: Cracked Stone Door
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -136,7 +136,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 1230, y: 4}
-    spritePosition: {x: 1202, y: 19}
+    spritePosition: {x: 1911, y: 418}
   - name: Cracked Door
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -158,7 +158,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 4, y: 315}
-    spritePosition: {x: 470, y: 19}
+    spritePosition: {x: 1179, y: 418}
   - name: Door
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -180,7 +180,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 712, y: 315}
-    spritePosition: {x: 467, y: 501}
+    spritePosition: {x: 1176, y: 900}
   - name: (Vert) Blue Sword
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -188,8 +188,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 995
-      y: 930
+      x: 4
+      y: 1625
       width: 77
       height: 323
     spriteID: 55e15818e7efd2d4e9170089d6c3749c
@@ -201,8 +201,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 995, y: 930}
-    spritePosition: {x: 1760, y: 1234}
+    uvTransform: {x: 4, y: 1625}
+    spritePosition: {x: 2469, y: 1633}
   - name: Blue Sword
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -210,8 +210,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1420
-      y: 314
+      x: 1705
+      y: 929
       width: 323
       height: 79
     spriteID: 8fca48fc023bb6144bfbfda9fee2d733
@@ -223,8 +223,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1420, y: 315}
-    spritePosition: {x: 1304, y: 1306}
+    uvTransform: {x: 1705, y: 930}
+    spritePosition: {x: 2013, y: 1705}
   - name: Strength Powerup
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -233,7 +233,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 1418
-      y: 518
+      y: 313
       width: 159
       height: 159
     spriteID: 1ff27beb3c66f4748b451fee8d356dc2
@@ -245,8 +245,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1420, y: 520}
-    spritePosition: {x: 853, y: 972}
+    uvTransform: {x: 1420, y: 315}
+    spritePosition: {x: 1562, y: 1371}
   - name: (Vert) Red Sword
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -254,8 +254,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1080
-      y: 930
+      x: 89
+      y: 1625
       width: 77
       height: 323
     spriteID: cd7fd58df79a8644181c46484963a81e
@@ -267,8 +267,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1080, y: 930}
-    spritePosition: {x: 1655, y: 1234}
+    uvTransform: {x: 89, y: 1625}
+    spritePosition: {x: 2364, y: 1633}
   - name: Red Sword
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -276,8 +276,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1420
-      y: 400
+      x: 1705
+      y: 1015
       width: 324
       height: 77
     spriteID: 1fa88b0f663a1924d85e9d17e8f633aa
@@ -289,8 +289,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1420, y: 400}
-    spritePosition: {x: 1304, y: 1427}
+    uvTransform: {x: 1705, y: 1015}
+    spritePosition: {x: 2013, y: 1826}
   - name: WIP Background. Will make full one later
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -312,7 +312,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 1372, y: 939}
+    spritePosition: {x: 2081, y: 1338}
   - name: Stone Castle Wall
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -334,7 +334,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 4, y: 520}
-    spritePosition: {x: 1202, y: 715}
+    spritePosition: {x: 1911, y: 1114}
   - name: Cracked Stone Castle Wall
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -356,7 +356,51 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 712, y: 520}
-    spritePosition: {x: 1202, y: 247}
+    spritePosition: {x: 1911, y: 646}
+  - name: Destroyed Castle Wall
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 375
+      y: 930
+      width: 657
+      height: 163
+    spriteID: 5b588dd00b9737e4b8b3a079bd19f543
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 375, y: 930}
+    spritePosition: {x: 490, y: 452}
+  - name: Destroyed Castle Wall
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1040
+      y: 930
+      width: 657
+      height: 163
+    spriteID: 1bd17bcb63a6b3f4e8749814bd2956c6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1040, y: 930}
+    spritePosition: {x: 455, y: 646}
   - name: Cracked Castle Wall
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -378,7 +422,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 4, y: 725}
-    spritePosition: {x: 470, y: 247}
+    spritePosition: {x: 1179, y: 646}
   - name: Castle Wall
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -400,7 +444,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 710, y: 724}
-    spritePosition: {x: 460, y: 715}
+    spritePosition: {x: 1169, y: 1114}
   - name: Speed Boost Powerup
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -409,7 +453,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 1580
-      y: 518
+      y: 313
       width: 160
       height: 159
     spriteID: 103fce13fec6e8b4ebdf9679ebb15240
@@ -421,8 +465,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1583, y: 520}
-    spritePosition: {x: 1126, y: 971}
+    uvTransform: {x: 1583, y: 315}
+    spritePosition: {x: 1835, y: 1370}
   - name: Healing Powerup
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -431,7 +475,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 1744
-      y: 519
+      y: 314
       width: 160
       height: 158
     spriteID: db03ea656405b30419834e96bce60699
@@ -443,8 +487,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1746, y: 520}
-    spritePosition: {x: 614, y: 972}
+    uvTransform: {x: 1746, y: 315}
+    spritePosition: {x: 1323, y: 1371}
   - name: Hue/Saturation 1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -452,8 +496,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 995
-      y: 1261
+      x: 2036
+      y: 930
       width: 0
       height: 0
     spriteID: c7adcfcc28cde76498063bfa76c383d0
@@ -465,8 +509,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 995, y: 1261}
-    spritePosition: {x: 0, y: 1564}
+    uvTransform: {x: 2036, y: 930}
+    spritePosition: {x: 0, y: 1963}
   - name: Soonic
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -488,7 +532,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 4, y: 930}
-    spritePosition: {x: 83, y: 786}
+    spritePosition: {x: 792, y: 1185}
   - name: Strength Ball
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -496,8 +540,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 375
-      y: 930
+      x: 4
+      y: 1313
       width: 302
       height: 304
     spriteID: 6f8f82891f2d08e45acc3cd0010c78a9
@@ -509,8 +553,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 375, y: 930}
-    spritePosition: {x: 467, y: 1260}
+    uvTransform: {x: 4, y: 1313}
+    spritePosition: {x: 1176, y: 1659}
   - name: Cannon Ball
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -518,8 +562,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 685
-      y: 930
+      x: 314
+      y: 1313
       width: 302
       height: 304
     spriteID: 5db848f67ae221045acb7093e02e36d4
@@ -531,8 +575,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 685, y: 930}
-    spritePosition: {x: 13, y: 1260}
+    uvTransform: {x: 314, y: 1313}
+    spritePosition: {x: 722, y: 1659}
   characterData:
     bones: []
     parts: []
@@ -653,7 +697,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 55e15818e7efd2d4e9170089d6c3749c
     layerID: 169
-    mosaicPosition: {x: 995, y: 930}
+    mosaicPosition: {x: 4, y: 1625}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -663,7 +707,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 8fca48fc023bb6144bfbfda9fee2d733
     layerID: 44
-    mosaicPosition: {x: 1420, y: 315}
+    mosaicPosition: {x: 1705, y: 930}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -673,7 +717,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 1ff27beb3c66f4748b451fee8d356dc2
     layerID: 57
-    mosaicPosition: {x: 1420, y: 520}
+    mosaicPosition: {x: 1420, y: 315}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -683,7 +727,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: cd7fd58df79a8644181c46484963a81e
     layerID: 168
-    mosaicPosition: {x: 1080, y: 930}
+    mosaicPosition: {x: 89, y: 1625}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -693,7 +737,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 1fa88b0f663a1924d85e9d17e8f633aa
     layerID: 166
-    mosaicPosition: {x: 1420, y: 400}
+    mosaicPosition: {x: 1705, y: 1015}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -727,6 +771,26 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
+  - name: Destroyed Castle Wall
+    spriteName: Destroyed Castle Wall
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5b588dd00b9737e4b8b3a079bd19f543
+    layerID: 176
+    mosaicPosition: {x: 375, y: 930}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Destroyed Castle Wall
+    spriteName: Destroyed Castle Wall
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1bd17bcb63a6b3f4e8749814bd2956c6
+    layerID: 175
+    mosaicPosition: {x: 1040, y: 930}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Cracked Castle Wall
     spriteName: Cracked Castle Wall
     isGroup: 0
@@ -753,7 +817,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 103fce13fec6e8b4ebdf9679ebb15240
     layerID: 59
-    mosaicPosition: {x: 1583, y: 520}
+    mosaicPosition: {x: 1583, y: 315}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -763,7 +827,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: db03ea656405b30419834e96bce60699
     layerID: 53
-    mosaicPosition: {x: 1746, y: 520}
+    mosaicPosition: {x: 1746, y: 315}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -773,7 +837,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: c7adcfcc28cde76498063bfa76c383d0
     layerID: 17
-    mosaicPosition: {x: 995, y: 1261}
+    mosaicPosition: {x: 2036, y: 930}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -793,7 +857,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 6f8f82891f2d08e45acc3cd0010c78a9
     layerID: 167
-    mosaicPosition: {x: 375, y: 930}
+    mosaicPosition: {x: 4, y: 1313}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -803,7 +867,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 5db848f67ae221045acb7093e02e36d4
     layerID: 3
-    mosaicPosition: {x: 685, y: 930}
+    mosaicPosition: {x: 314, y: 1313}
     flatten: 0
     isImported: 1
     isVisible: 1
