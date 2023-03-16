@@ -32,9 +32,9 @@ public class Powerup : MonoBehaviour
 		timeToDisplay += Time.deltaTime;
 		float minutes = Mathf.FloorToInt(timeToDisplay / 60); 
 		float seconds = Mathf.FloorToInt(timeToDisplay % 60);
-		if ((seconds % 5) == 0 & spawned == false) {
+		if ((seconds % 10) == 0 & spawned == false) {
 			spawned = true;
-			int x = Random.Range(0, 3);
+			int x = Random.Range(0, 2);
 			if(x == 0){
 				GetComponent<SpriteRenderer>().sprite = healthPU;
 				randPowerup = "Health";

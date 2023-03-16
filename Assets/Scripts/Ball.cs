@@ -43,6 +43,10 @@ public class Ball : MonoBehaviour
     public Sprite rightDoorCrack;
     public Sprite rightRubble;
 	
+	public AudioSource audioPlayer;
+	public AudioSource swordHit;
+	public AudioSource sidesHit;
+	
 
     public GameObject wall1;
     public GameObject wall2;
@@ -68,6 +72,7 @@ public class Ball : MonoBehaviour
         txtHealthRight.text = "250";
 		timeText.text = "0";
         origPos = transform.position;
+		
 
         left_script = paddle_left.GetComponent<Paddle>();
         right_script = paddle_right.GetComponent<Paddle>();
@@ -124,6 +129,7 @@ public class Ball : MonoBehaviour
 	
     void OnCollisionEnter2D(Collision2D c) {
         if (c.gameObject.CompareTag("PaddleRight")){
+			swordHit.Play();
 			dir.x *= -1;
 
             if (speed == 8){
@@ -137,6 +143,7 @@ public class Ball : MonoBehaviour
 			}
 		}
         else if (c.gameObject.CompareTag("PaddleLeft")){
+			swordHit.Play();
 			dir.x *= -1;
 			if (speed == 8){
                 GetComponent<SpriteRenderer>().sprite = cannon;
@@ -149,9 +156,11 @@ public class Ball : MonoBehaviour
 			}
 		}
         else if (c.gameObject.CompareTag("TopBottom Boundary")){
+			sidesHit.Play();
             dir.y *= -1;
         }
         else if (c.gameObject.CompareTag("Right Boundary")){
+			audioPlayer.Play();
             var expo = Instantiate(explosion, c.contacts[0].point, Quaternion.identity);
             Destroy(expo, 1.0f);
 
@@ -195,6 +204,7 @@ public class Ball : MonoBehaviour
             transform.position = origPos;
         }
         else if (c.gameObject.CompareTag("Left Boundary")){
+			audioPlayer.Play();
             var expo = Instantiate(explosion, c.contacts[0].point, Quaternion.identity);
             Destroy(expo, 1.0f);
 
