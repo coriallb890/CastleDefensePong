@@ -93,6 +93,50 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
+  - name: Rectangle 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1938
+      y: 102
+      width: 18
+      height: 16
+    spriteID: 67b0cde8c9d66704e8cfc3694e18ca94
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1936, y: 100}
+    spritePosition: {x: 800, y: 345}
+  - name: Rectangle 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1938
+      y: 4
+      width: 18
+      height: 90
+    spriteID: c360884409a19a44b9f31b76baf94503
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1938, y: 4}
+    spritePosition: {x: 800, y: 256}
   - name: Door Stone
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -496,8 +540,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 2036
-      y: 930
+      x: 1938
+      y: 126
       width: 0
       height: 0
     spriteID: c7adcfcc28cde76498063bfa76c383d0
@@ -509,7 +553,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 2036, y: 930}
+    uvTransform: {x: 1938, y: 126}
     spritePosition: {x: 0, y: 1963}
   - name: Soonic
     originalName: 
@@ -651,6 +695,26 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
+  - name: Rectangle 2
+    spriteName: Rectangle 2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 67b0cde8c9d66704e8cfc3694e18ca94
+    layerID: 178
+    mosaicPosition: {x: 1938, y: 102}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Rectangle 1
+    spriteName: Rectangle 1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c360884409a19a44b9f31b76baf94503
+    layerID: 177
+    mosaicPosition: {x: 1938, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Door Stone
     spriteName: Door Stone
     isGroup: 0
@@ -837,7 +901,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: c7adcfcc28cde76498063bfa76c383d0
     layerID: 17
-    mosaicPosition: {x: 2036, y: 930}
+    mosaicPosition: {x: 1938, y: 126}
     flatten: 0
     isImported: 1
     isVisible: 1
