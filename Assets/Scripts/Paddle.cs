@@ -11,6 +11,8 @@ public class Paddle : MonoBehaviour
 	public GameObject echo;
 	public int setter = 50;
 
+    public bool speedPower = false;
+
     public int strength = 50;
 
     Rigidbody2D rigidBody;
@@ -71,6 +73,7 @@ public class Paddle : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D c) {
         if (c.gameObject.transform.tag.StartsWith("Powerup")){
 			setter = 51;
+            speedPower = true;
 		}
 	}
 }

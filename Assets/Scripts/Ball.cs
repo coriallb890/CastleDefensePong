@@ -29,14 +29,12 @@ public class Ball : MonoBehaviour
     private Renderer left_castle;
     private Renderer right_castle;
 	
-	public GameObject some;
-	public Paddle strengthy; 
 	
 
     // Start is called before the first frame update
     void Start()
     {
-		strengthy = some.GetComponent<Paddle>();
+		//strengthy = some.GetComponent<Paddle>();
         healthLeft = 250;
         healthRight = 250;
         txtHealthLeft.text = "250";
@@ -77,24 +75,40 @@ public class Ball : MonoBehaviour
 		float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 		timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
 		
-		if (seconds >= 10.0 && seconds < 20){
-			speed = 6;
-		}
-		else if (seconds >= 20.0) {
-			speed = 9;
-		}
-		else {
-			speed = 4;
-		}
+		//if (seconds >= 10.0 && seconds < 20){
+		//	speed = 6;
+		//}
+		//else if (seconds >= 20.0) {
+		//	speed = 9;
+		//}
+		//else {
+		//	speed = 4;
+		//}
     }
 
 	
 	
     void OnCollisionEnter2D(Collision2D c) {
-        if (c.gameObject.transform.tag.StartsWith("Paddle")){
+        if (c.gameObject.CompareTag("PaddleRight")){
 			dir.x *= -1;
-			if (strengthy.setter == 51) {
-				speed = 16;
+
+            if (speed == 8){
+                speed = 4;
+            }
+			if (right_script.speedPower) {
+            
+				speed = 8;
+                right_script.speedPower = false;
+			}
+		}
+        else if (c.gameObject.CompareTag("PaddleLeft")){
+			dir.x *= -1;
+			if (speed == 8){
+                speed = 4;
+            }
+            if (left_script.speedPower) {
+				speed = 8;
+                left_script.speedPower = false;
 			}
 		}
         else if (c.gameObject.CompareTag("TopBottom Boundary")){
@@ -103,6 +117,9 @@ public class Ball : MonoBehaviour
         else if (c.gameObject.CompareTag("Right Boundary")){
             healthRight = healthRight - left_script.strength;
 			timeToDisplay = timeToDisplay - timeToDisplay;
+            if (speed == 8){
+                speed = 4;
+            }
             if(healthRight <= 150 && healthRight > 50){
                 right_castle.material.color = new Color(255, 244, 0, 1);
             }
@@ -122,6 +139,9 @@ public class Ball : MonoBehaviour
         else if (c.gameObject.CompareTag("Left Boundary")){
             healthLeft = healthLeft - right_script.strength;
 			timeToDisplay = timeToDisplay - timeToDisplay;
+            if (speed == 8){
+                speed = 4;
+            }
             if(healthLeft <= 150 && healthLeft > 50){
                 left_castle.material.color = new Color(255, 244, 0, 1);
             }
