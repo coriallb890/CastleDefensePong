@@ -29,10 +29,14 @@ public class Ball : MonoBehaviour
     private Renderer left_castle;
     private Renderer right_castle;
 	
+	public GameObject some;
+	public Paddle strengthy; 
+	
 
     // Start is called before the first frame update
     void Start()
     {
+		strengthy = some.GetComponent<Paddle>();
         healthLeft = 250;
         healthRight = 250;
         txtHealthLeft.text = "250";
@@ -89,6 +93,9 @@ public class Ball : MonoBehaviour
     void OnCollisionEnter2D(Collision2D c) {
         if (c.gameObject.transform.tag.StartsWith("Paddle")){
 			dir.x *= -1;
+			if (strengthy.setter == 51) {
+				speed = 16;
+			}
 		}
         else if (c.gameObject.CompareTag("TopBottom Boundary")){
             dir.y *= -1;

@@ -9,6 +9,7 @@ public class Paddle : MonoBehaviour
 	public float timeBtwSpawns;
 	public float startTimeBtwSpawns;
 	public GameObject echo;
+	public int setter = 50;
 
     public int strength = 50;
 
@@ -69,7 +70,7 @@ public class Paddle : MonoBehaviour
     }
 	private void OnTriggerEnter2D(Collider2D c) {
         if (c.gameObject.transform.tag.StartsWith("Powerup")){
-			strength = 51;
+			setter = 51;
 		}
 	}
 }
