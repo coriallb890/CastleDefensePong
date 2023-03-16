@@ -25,10 +25,15 @@ public class Ball : MonoBehaviour
     public GameObject castle_left;
     public GameObject castle_right;
     public GameObject middle_boundary;
+	public GameObject slider_left;
+	public GameObject slider_right;
     private Paddle left_script;
     private Paddle right_script;
     private Renderer left_castle;
     private Renderer right_castle;
+	public GameObject LeftHealth;
+	public GameObject RightHealth;
+	
 
     public Sprite sanic;
     public Sprite cannon;
@@ -46,6 +51,7 @@ public class Ball : MonoBehaviour
 	public AudioSource audioPlayer;
 	public AudioSource swordHit;
 	public AudioSource sidesHit;
+	public AudioSource sonic;
 	
 
     public GameObject wall1;
@@ -140,6 +146,7 @@ public class Ball : MonoBehaviour
                 GetComponent<SpriteRenderer>().sprite = sanic;
 				speed = 8;
                 right_script.speedPower = false;
+				sonic.Play();
 			}
 		}
         else if (c.gameObject.CompareTag("PaddleLeft")){
@@ -153,6 +160,7 @@ public class Ball : MonoBehaviour
                 GetComponent<SpriteRenderer>().sprite = sanic;
 				speed = 8;
                 left_script.speedPower = false;
+				sonic.Play();
 			}
 		}
         else if (c.gameObject.CompareTag("TopBottom Boundary")){
