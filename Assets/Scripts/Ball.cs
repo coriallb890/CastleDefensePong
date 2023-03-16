@@ -32,7 +32,30 @@ public class Ball : MonoBehaviour
 
     public Sprite sanic;
     public Sprite cannon;
+    public Sprite leftWall;
+    public Sprite leftDoor;
+    public Sprite leftWallCrack;
+    public Sprite leftDoorCrack;
+    public Sprite leftRubble;
+    public Sprite rightWall;
+    public Sprite rightDoor;
+    public Sprite rightWallCrack;
+    public Sprite rightDoorCrack;
+    public Sprite rightRubble;
 	
+
+    public GameObject wall1;
+    public GameObject wall2;
+    public GameObject wall3;
+    public GameObject wall4;
+    public GameObject wall5;
+    public GameObject wall6;
+    private SpriteRenderer Lwall1;
+    private SpriteRenderer Lwall2;
+    private SpriteRenderer Lwall3;
+    private SpriteRenderer Rwall1;
+    private SpriteRenderer Rwall2;
+    private SpriteRenderer Rwall3;
 	
 
     // Start is called before the first frame update
@@ -52,6 +75,13 @@ public class Ball : MonoBehaviour
         right_castle = castle_right.GetComponent<Renderer>();
         Physics2D.IgnoreCollision(middle_boundary.GetComponent<Collider2D>(), GetComponent<Collider2D>());
 		
+        Lwall1 = wall1.GetComponent<SpriteRenderer>();
+        Lwall2 = wall2.GetComponent<SpriteRenderer>();
+        Lwall3 = wall3.GetComponent<SpriteRenderer>();
+        Rwall1 = wall4.GetComponent<SpriteRenderer>();
+        Rwall2 = wall5.GetComponent<SpriteRenderer>();
+        Rwall3 = wall6.GetComponent<SpriteRenderer>();
+
 
         float result = Random.Range(0f, 1f);
         if (result < 0.5) {
@@ -137,11 +167,21 @@ public class Ball : MonoBehaviour
             if (speed == 8){
                 speed = 4;
             }
+
+            if(healthRight > 150){
+                Rwall1.sprite = rightWall;
+                Rwall2.sprite = rightDoor;
+                Rwall3.sprite = rightWall;
+            }
             if(healthRight <= 150 && healthRight > 50){
-                right_castle.material.color = new Color(255, 244, 0, 1);
+                Rwall1.sprite = rightWallCrack;
+                Rwall2.sprite = rightDoorCrack;
+                Rwall3.sprite = rightWallCrack;
             }
             else if (healthRight <= 50 && healthRight > 0){
-                right_castle.material.color = new Color(255, 0, 0, 1);
+                Rwall1.sprite = rightRubble;
+                Rwall2.sprite = rightRubble;
+                Rwall3.sprite = rightRubble;
             }
 
 
@@ -170,11 +210,21 @@ public class Ball : MonoBehaviour
             if (speed == 8){
                 speed = 4;
             }
+
+            if(healthLeft > 150){
+                Lwall1.sprite = leftWall;
+                Lwall2.sprite = leftDoor;
+                Lwall3.sprite = leftWall;
+            }
             if(healthLeft <= 150 && healthLeft > 50){
-                left_castle.material.color = new Color(255, 244, 0, 1);
+                Lwall1.sprite = leftWallCrack;
+                Lwall2.sprite = leftDoorCrack;
+                Lwall3.sprite = leftWallCrack;
             }
             else if (healthLeft <= 50 && healthLeft > 0){
-                left_castle.material.color = new Color(255, 0, 0, 1);
+                Lwall1.sprite = leftRubble;
+                Lwall2.sprite = leftRubble;
+                Lwall3.sprite = leftRubble;
             }
 
 
@@ -190,6 +240,38 @@ public class Ball : MonoBehaviour
     }
 
     public void updateHealth(){
+        if(healthRight > 150){
+            Rwall1.sprite = rightWall;
+            Rwall2.sprite = rightDoor;
+            Rwall3.sprite = rightWall;
+        }
+        if(healthRight <= 150 && healthRight > 50){
+            Rwall1.sprite = rightWallCrack;
+            Rwall2.sprite = rightDoorCrack;
+            Rwall3.sprite = rightWallCrack;
+        }
+        else if (healthRight <= 50 && healthRight > 0){
+            Rwall1.sprite = rightRubble;
+            Rwall2.sprite = rightRubble;
+            Rwall3.sprite = rightRubble;
+        }
+
+        if(healthLeft > 150){
+            Lwall1.sprite = leftWall;
+            Lwall2.sprite = leftDoor;
+            Lwall3.sprite = leftWall;
+        }
+        if(healthLeft <= 150 && healthLeft > 50){
+            Lwall1.sprite = leftWallCrack;
+            Lwall2.sprite = leftDoorCrack;
+            Lwall3.sprite = leftWallCrack;
+        }
+        else if (healthLeft <= 50 && healthLeft > 0){
+            Lwall1.sprite = leftRubble;
+            Lwall2.sprite = leftRubble;
+            Lwall3.sprite = leftRubble;
+        }
+
         if(healthLeft > 250){
             healthLeft = 250;
         }

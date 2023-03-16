@@ -405,6 +405,22 @@ MonoBehaviour:
   middle_boundary: {fileID: 1644675631}
   sanic: {fileID: -4055563121749383319, guid: 148eeb2bbb8feac4c8e7e3a7fc1a199a, type: 3}
   cannon: {fileID: 3237339856637804374, guid: 148eeb2bbb8feac4c8e7e3a7fc1a199a, type: 3}
+  leftWall: {fileID: 8676419377735968422, guid: 148eeb2bbb8feac4c8e7e3a7fc1a199a, type: 3}
+  leftDoor: {fileID: 8152404153221313372, guid: 148eeb2bbb8feac4c8e7e3a7fc1a199a, type: 3}
+  leftWallCrack: {fileID: 3426112946356358017, guid: 148eeb2bbb8feac4c8e7e3a7fc1a199a, type: 3}
+  leftDoorCrack: {fileID: -3905521515603238224, guid: 148eeb2bbb8feac4c8e7e3a7fc1a199a, type: 3}
+  leftRubble: {fileID: 7601206388317166058, guid: 148eeb2bbb8feac4c8e7e3a7fc1a199a, type: 3}
+  rightWall: {fileID: 7689150993272263002, guid: 148eeb2bbb8feac4c8e7e3a7fc1a199a, type: 3}
+  rightDoor: {fileID: -975820072925249929, guid: 148eeb2bbb8feac4c8e7e3a7fc1a199a, type: 3}
+  rightWallCrack: {fileID: -5472213484048727193, guid: 148eeb2bbb8feac4c8e7e3a7fc1a199a, type: 3}
+  rightDoorCrack: {fileID: -446174870527216945, guid: 148eeb2bbb8feac4c8e7e3a7fc1a199a, type: 3}
+  rightRubble: {fileID: 3802379873420757457, guid: 148eeb2bbb8feac4c8e7e3a7fc1a199a, type: 3}
+  wall1: {fileID: 342079220}
+  wall2: {fileID: 164770618}
+  wall3: {fileID: 2017815659}
+  wall4: {fileID: 1620795374}
+  wall5: {fileID: 1984179434}
+  wall6: {fileID: 1012409526}
 --- !u!212 &203365876
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8461,7 +8477,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787512259}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.02, y: -0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
