@@ -9,9 +9,15 @@ public class Paddle : MonoBehaviour
 	public float timeBtwSpawns;
 	public float startTimeBtwSpawns;
 	public GameObject echo;
-	public int setter = 50;
 
     public bool speedPower = false;
+
+	public GameObject power_left;
+    public GameObject power_right;
+    public GameObject cannon;
+    private Ball ball;
+    private Powerup left_power;
+    private Powerup right_power;
 
     public int strength = 50;
 
@@ -20,14 +26,12 @@ public class Paddle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        left_power = power_left.GetComponent<Powerup>();
+        right_power = power_right.GetComponent<Powerup>();
+        ball = cannon.GetComponent<Ball>();
+
         rigidBody = GetComponent<Rigidbody2D>();
         rigidBody.freezeRotation = true;
-        if (transform.CompareTag("PaddleRight")) {
-            
-        }
-        else {
-            GetComponent<SpriteRenderer>().color = new Color(1, 0, 1);
-        }
     }
 
     // Update is called once per frame
@@ -40,7 +44,6 @@ public class Paddle : MonoBehaviour
 			timeBtwSpawns -= Time.deltaTime;
 		}
         if (transform.CompareTag("PaddleRight")) {
-            GetComponent<SpriteRenderer>().color = new Color(0, 0, Mathf.Abs(Mathf.Sin(Time.time)));
             if (Input.GetKey(KeyCode.UpArrow)) {
                 transform.Translate(Vector3.up * speed * Time.deltaTime);
             }
@@ -55,7 +58,7 @@ public class Paddle : MonoBehaviour
             }
         }
         else if (transform.CompareTag("PaddleLeft")){
-            GetComponent<SpriteRenderer>().color = new Color(Mathf.Abs(Mathf.Sin(Time.time)), 0, Mathf.Abs(Mathf.Sin(Time.time)));
+    
             if (Input.GetKey(KeyCode.W)) {
                 transform.Translate(Vector3.up * speed * Time.deltaTime);
             }
@@ -72,8 +75,31 @@ public class Paddle : MonoBehaviour
     }
 	private void OnTriggerEnter2D(Collider2D c) {
         if (c.gameObject.transform.tag.StartsWith("Powerup")){
-			setter = 51;
-            speedPower = true;
-		}
+            if (transform.CompareTag("PaddleRight")){
+                if(right_power.randPowerup == "Speed"){
+                    speedPower = true;
+                }
+                else if (right_power.randPowerup == "Damage"){
+                    strength = 100;
+                }
+                else if(right_power.randPowerup == "Health"){
+                    ball.healthRight += 50;
+                    ball.updateHealth();
+                }
+			}
+
+            else if (transform.CompareTag("PaddleLeft")){
+                if(left_power.randPowerup == "Speed"){
+                    speedPower = true;
+                }
+                else if (left_power.randPowerup == "Damage"){
+                    strength = 100;
+                }
+                else if(left_power.randPowerup == "Health"){
+                    ball.healthLeft += 50;
+                    ball.updateHealth();
+                }
+            }
+        }
 	}
 }

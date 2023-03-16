@@ -9,9 +9,10 @@ public class Ball : MonoBehaviour
     public TextMeshProUGUI txtHealthRight;
 	public TextMeshProUGUI timeText;
 
+    public GameObject explosion;
 
-    private int healthLeft;
-    private int healthRight;
+    public int healthLeft;
+    public int healthRight;
     public float speed = 4;
 	public float timeToDisplay;
     public Vector2 dir;
@@ -28,6 +29,9 @@ public class Ball : MonoBehaviour
     private Paddle right_script;
     private Renderer left_castle;
     private Renderer right_castle;
+
+    public Sprite sanic;
+    public Sprite cannon;
 	
 	
 
@@ -93,10 +97,11 @@ public class Ball : MonoBehaviour
 			dir.x *= -1;
 
             if (speed == 8){
+                GetComponent<SpriteRenderer>().sprite = cannon;
                 speed = 4;
             }
 			if (right_script.speedPower) {
-            
+                GetComponent<SpriteRenderer>().sprite = sanic;
 				speed = 8;
                 right_script.speedPower = false;
 			}
@@ -104,9 +109,11 @@ public class Ball : MonoBehaviour
         else if (c.gameObject.CompareTag("PaddleLeft")){
 			dir.x *= -1;
 			if (speed == 8){
+                GetComponent<SpriteRenderer>().sprite = cannon;
                 speed = 4;
             }
             if (left_script.speedPower) {
+                GetComponent<SpriteRenderer>().sprite = sanic;
 				speed = 8;
                 left_script.speedPower = false;
 			}
@@ -115,7 +122,17 @@ public class Ball : MonoBehaviour
             dir.y *= -1;
         }
         else if (c.gameObject.CompareTag("Right Boundary")){
+            var expo = Instantiate(explosion, c.contacts[0].point, Quaternion.identity);
+            Destroy(expo, 1.0f);
+
+            GetComponent<SpriteRenderer>().sprite = cannon;
             healthRight = healthRight - left_script.strength;
+            updateHealth();
+
+
+            if(left_script.strength == 100){
+                left_script.strength = 50;
+            }
 			timeToDisplay = timeToDisplay - timeToDisplay;
             if (speed == 8){
                 speed = 4;
@@ -126,18 +143,29 @@ public class Ball : MonoBehaviour
             else if (healthRight <= 50 && healthRight > 0){
                 right_castle.material.color = new Color(255, 0, 0, 1);
             }
+
+
             if (healthRight <= 0){
                 txtHealthRight.text = "0";
                 gameOver.GetComponent<UIManager>().GameOverSequence();
                 speed = 0;
             }
-            else{
-                txtHealthRight.text = healthRight.ToString();
-            }
+
+
             transform.position = origPos;
         }
         else if (c.gameObject.CompareTag("Left Boundary")){
+            var expo = Instantiate(explosion, c.contacts[0].point, Quaternion.identity);
+            Destroy(expo, 1.0f);
+
+            GetComponent<SpriteRenderer>().sprite = cannon;
             healthLeft = healthLeft - right_script.strength;
+            updateHealth();
+
+
+            if(right_script.strength == 100){
+                right_script.strength = 50;
+            }
 			timeToDisplay = timeToDisplay - timeToDisplay;
             if (speed == 8){
                 speed = 4;
@@ -148,15 +176,27 @@ public class Ball : MonoBehaviour
             else if (healthLeft <= 50 && healthLeft > 0){
                 left_castle.material.color = new Color(255, 0, 0, 1);
             }
+
+
             if (healthLeft <= 0){
                 txtHealthLeft.text = "0";
                 gameOver.GetComponent<UIManager>().GameOverSequence();
                 speed = 0;
             }
-            else{
-                txtHealthLeft.text = healthLeft.ToString();
-            }
+
+
             transform.position = origPos;
         }
+    }
+
+    public void updateHealth(){
+        if(healthLeft > 250){
+            healthLeft = 250;
+        }
+        if(healthRight > 250){
+            healthRight = 250;
+        }
+        txtHealthLeft.text = healthLeft.ToString();
+        txtHealthRight.text = healthRight.ToString();
     }
 }
